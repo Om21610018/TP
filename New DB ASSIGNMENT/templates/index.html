@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <link
+      rel="shortcut icon"
+      href="https://img.collegepravesh.com/2018/11/WCE-Sangli-Logo.png"
+      type="image/x-icon"
+    />
+    <title>WCE form</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        overflow-x: hidden;
+        overflow-y: auto;
+  
+      }
+      .wrapper {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        color: white;
+      }
+      input {
+        all: unset;
+        background-color: rgba(128, 128, 128, 0.443);
+        border: 1px solid black;
+        padding: 5px 5px;
+        border-radius: 10px;
+      }
+      input:focus {
+        border: 1px solid red;
+      }
+      label {
+        font-weight: bold;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      input::placeholder {
+        color: rgba(245, 222, 179, 0.655);
+      }
+      #btn {
+        margin: 0 auto;
+        padding: 10px 20px;
+        transition: all 0.1s linear;
+      }
+      #btn:hover {
+        transform: scale(1.1);
+        background-color: skyblue;
+        color: black;
+      }
+      h1{
+        margin-top: 50px;
+      }
+      h1,
+      h3 {
+        color: white;
+      }
+      img {
+        margin-bottom: 50px;
+      }
+      marquee {
+        position: absolute;
+        top: 0;
+        background-color: red;
+        padding: 4px;
+        margin-bottom: 30px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <marquee behavior="scroll" direction="right"
+        >Feel the form In Proper way according to the guidelines of the class
+        teacher</marquee
+      >
+      <h1>Walchand College of Engineering, Sangli</h1>
+      <h3>Students Details Form</h3>
+      <img
+        src="https://img.collegepravesh.com/2018/11/WCE-Sangli-Logo.png"
+        alt=""
+      />
+      <form action="/submit" method="post">
+        <div class="prn">
+          <label for="prn">PRN:</label>
+          <input type="text" placeholder="Enter your PRN" id="prn" name="prn" />
+        </div>
+        <div class="name">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            placeholder="Enter your Name"
+            id="name"
+            name="name"
+          />
+        </div>
+        <div class="email">
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            placeholder="Enter your Email"
+            id="email"
+            name="email"
+          />
+        </div>
+        <div class="age">
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            placeholder="Enter your age"
+            id="age"
+            name="age"
+          />
+        </div>
+        <div class="branch">
+          <label for="branch">Branch:</label>
+          <input
+            type="text"
+            placeholder="Enter your Branch"
+            id="branch"
+            name="branch"
+          />
+        </div>
+        <input id="btn" onsubmit="submitHandler" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
